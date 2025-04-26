@@ -6,12 +6,12 @@
     <title>Document</title>
 </head>
 <body>
+
 <h1>ARRAY DE UM NÚMERO MAIOR DO QUE 10.</h1>
-
-
 
     <script>
         let numeros = [
+          { nome: "3", numero: 3},  
           { nome: "18", numero: 18},
           { nome: "7", numero: 7},
           { nome: "12", numero: 12},
@@ -24,6 +24,18 @@
                 console.log(numeros[i].nome);
             }
         }
+
+        // Outra Forma //
+
+        let number = [3,18,7,12,25,1]
+        let contagem = 0
+
+        for(let i = 0; i < number.length; i++) {
+          if(number[i] > 10) {
+            contagem ++;
+          }
+        }
+        console.log("Quantidade de Números maior que 10:" + contagem)
     </script>
 
 </body>
