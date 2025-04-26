@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<h1>ARRAY DE UM NÚMERO MAIOR DO QUE 10.</h1>
+
+
+
+    <script>
+        let numeros = [
+          { nome: "18", numero: 18},
+          { nome: "7", numero: 7},
+          { nome: "12", numero: 12},
+          { nome: "25", numero: 25},
+          { nome: "1", numero: 1}
+        ];
+
+        for(let i = 0; i < numeros.length; i++) {
+            if(numeros[i].numero > 10) {
+                console.log(numeros[i].nome);
+            }
+        }
+    </script>
+
+</body>
+</html>
