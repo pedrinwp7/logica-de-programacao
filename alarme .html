@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let hora = parseInt(prompt("Digite o horário em que vai dormir:"));
+
+        function horaDeAcordar(horaDeDormir) {
+            let horaDeAcordar = hora + 8
+
+            if(hora >= 24){
+                horaDeAcordar = horaDeAcordar - 24
+            }
+            return horaDeAcordar;
+           }
+        
+           function horaDeAcordar(horaDeDormir){
+            let horaDeAcordar = (horaDeDormir + 8) % 24
+            return horaDeAcordar
+           }
+
+           alert(horaDeAcordar(horaDeDormir));
+    </script>
+</body>
+</html>

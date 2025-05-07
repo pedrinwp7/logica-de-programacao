@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,10 +7,16 @@
 </head>
 <body>
     <script>
-        function conversor(distancia, consumo){
+let distancia = parseFloat(prompt("Digite a distância percorrida em KM:"));
+let consumo = parseFloat(prompt("Digite a quantidade consumida em LITROS durante o trajeto:"));
+
+        function calcularConsumo(distancia, consumo){
             return distancia / consumo;
         }
-        console.log("A média KM/L é de:" + conversor(1550,3));
+        alert("A distância informada foi de:" + distancia + ".O consumo informado foi de:" + consumo + ".A média KM/L foi de:" + calcularConsumo(distancia, consumo));
+
+       
+        
     </script>
 </body>
 </html>
