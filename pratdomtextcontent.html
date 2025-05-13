@@ -9,15 +9,15 @@
 
     <!-- tentativa falha de fazer o titulo principal aparecer sozinho -->
 
-    <h1 id="titulo" value="Título Aleatório"> <span id="titulo-aleatorio"> Título principal </span> </h1>
-    <h1 id="titulo-aleatorio" value="Título principal"> <span id="titulo"> Título aleatório </span>  </h1>
+    <h1 id="titulo-principal" value="Título Aleatório"> <span id="titulo-aleatorio"> Título principal </span> </h1>
+    <h1 id="titulo-aleatorio">  Título aleatório  </h1>
     <button id="botao" onclick="alterarTitulo()"> Mude o título </button>
 
     <!-- função para mudar -->
 
     <script>
         function alterarTitulo(){
-            let texto = document.getElementById('titulo').value
+            let texto = document.getElementById('titulo-principal').value
             let botao = document.getElementById('titulo-aleatorio')
             botao.textContent = texto;
         }

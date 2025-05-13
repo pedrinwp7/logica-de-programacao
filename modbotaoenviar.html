@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="desativarBotao()" id="botaoEnviar"> Enviar ></button>
+    <button onclick="resetarBotao()" id="botaoEnviar"> resetar > </button>
+
+    <script>
+        function desativarBotao() {
+            const botao = document.getElementById("botaoEnviar");
+            botao.disabled = true;
+            botao.style.backgroundColor = "#ccc"
+            botao.style.color = "blue"
+            botao.style.cursor = "not-allowed"
+            botao.innerText = "Enviado!"
+        }
+
+        function resetarBotao() {
+            const botao = document.getElementById("botaoEnviar");
+            botao.disabled = false;
+            botao.style.backgroundColor = ""
+            botao.style.color = "black"
+            botao.style.cursor = "pointer"
+            botao.innerText = "Enviar >" 
+        }
+    </script>
+</body>
+</html>
