@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       #caixa{
+         background-color: #ccc;
+         border: solid 2px gray;
+         margin: 0;
+         padding: 10px 20px;
+       }
+
+       button {
+        margin: 35px 20px;
+        background-color: lightslategrey;
+        color: black;
+       }
+    </style>
+</head>
+<body>
+
+    <div id="caixa">
+        <h1> Mude o tema da div, clicando no botão. </h1>
+        <p id="fonte"> lorem </p>
+    </div>
+
+    <button onclick="temaEscuro()"> Alternar para o modo escuro </button>
+    <button onclick="temaClaro()"> alternar modo claro </butto>
+    <button onclick="alterarFonte()"> altere o estilo da fonte</button>
+    <button onclick="aumentarFonte()"> + </button>
+    <button onclick="diminuirFonte()"> - </button>
+
+    <script>
+     let tamanhoFonteAtual = 15;
+
+       function temaEscuro(){
+        const caixa = document.getElementById('caixa')
+        caixa.style.backgroundColor = 'black'
+        caixa.style.color = 'white'
+       }
+
+       function temaClaro(){
+        const caixa = document.getElementById('caixa')
+        caixa.style.backgroundColor = 'white'
+        caixa.style.color = 'black'
+       }
+
+       function alterarFonte(){
+        const fonte = document.getElementById('fonte')
+        fonte.style.fontSize = 'larger'
+        fonte.style.fontFamily = 'Verdana, Geneva, Tahoma, sans-serif'
+       }
+
+       function aumentarFonte(){
+        const fonte = document.getElementById('fonte')
+        fonte.style.fontSize = tamanhoFonteAtual++ + 'px'
+       }
+
+       function diminuirFonte(){
+       const fonte = document.getElementById('fonte')
+       fonte.style.fontSize = tamanhoFonteAtual-- + 'px'
+       }
+    </script>
+
+</body>
+</html>
