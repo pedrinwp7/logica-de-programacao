@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="botao"> Clique aqui! </button>
+    <p id="onClick"></p>
+    <p id="dblClick"></p>
+
+    <script>
+        let botaoClick = document.getElementById('botao')
+        let mensagem1 = document.getElementById('onClick')
+        let mensagem2 = document.getElementById('dblClick')
+
+        botaoClick.addEventListener('submit', function(event){
+        if(event.click || dblclick === 'click') {
+         mensagem1.textContent =  "Você clicou uma vez!"
+         mensagem2.textContent =  "Você clicou duas vezes!"
+        } 
+        })
+    </script>
+</body>
+</html>
