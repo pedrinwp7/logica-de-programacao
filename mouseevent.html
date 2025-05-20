@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #caixa {
+            width: 100px;
+            height: 100px;
+            border: 2px solid black;
+            margin: 0 auto;
+            background-color: blue;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="caixa"> </div>
+
+    <script>
+        let mouseMoviment = document.getElementById('caixa')
+
+        mouseMoviment.addEventListener('mouseover', function(){
+          mouseMoviment.style.backgroundColor = "brown"
+        })
+
+        mouseMoviment.addEventListener('mouseout', function(){
+          mouseMoviment.style.backgroundColor = "blue"
+        })
+    </script>
+</body>
+</html>
