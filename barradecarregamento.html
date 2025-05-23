@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       .caixa{
+        width: 210vh;
+        height: 40px;
+        background-color: lightgray;
+        border-radius: 8px;
+       }
+
+       #barra{
+        background-color: green;
+        width: 0px;
+        height: 40px;
+        border-radius: 8px;
+       }
+
+       #barra:hover{
+        background-color: forestgreen;
+       }
+    </style>
+</head>
+<body>
+    <h2> Loading... </h2>
+    <div class="caixa">
+    <p id="barra"></p>
+    </div>
+
+    <script>
+        let posicao= 0;
+        let barra = document.getElementById('barra')
+        
+        let intervalo = setInterval(() => {  
+         posicao += 10
+         barra.style.width = posicao + '%' 
+         if(posicao >= 100){
+            clearInterval(intervalo);
+         }  
+        }, 1000);
+    </script>
+</body>
+</html>
