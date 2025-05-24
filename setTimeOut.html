@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1> Só exibir depois que botar no botão </h1>
+    <button id="botao"> aqui! </button>
+    <p id="mensagem"></p>
+
+    <script>
+        document.getElementById('botao').addEventListener('click', () => {
+            setTimeout(() => {
+             document.getElementById('mensagem').textContent = "Vc botou no botão!"
+            }, 3000)
+        })
+    </script>
+</body>
+</html>

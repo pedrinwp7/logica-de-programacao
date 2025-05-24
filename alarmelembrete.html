@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1> Agende sua Reunião: </h1>
+    <button id="botao"> Agendar Compromisso! </button>
+    <input type="number" id="timer">
+    <button id="ampulheta"> Contar o Tempo! </button>
+    <p id="mensagem"> Agende o seu Compromisso!!</p>
+    <p>Tempo Restante: <span id="contador"></span> </p>
+
+    <h2> Clique primeiro para iniciar a contagem, depois agende! </h2>
+
+    <script>   
+       document.getElementById('ampulheta').addEventListener('click', () => {
+// 
+     let tempo = document.getElementById('timer').value
+     let contador = tempo 
+
+          let intervalo = setInterval(() => {
+              document.getElementById('contador').textContent = contador
+              contador--
+            if(contador < 0){
+            clearInterval(intervalo)
+            }
+          }, 1000); 
+        })
+// 
+         document.getElementById('botao').addEventListener('click', () => {
+         setTimeout(() => {
+             document.getElementById('mensagem').textContent = "Não se esqueça da sua reunião!!"
+             alert("Chegou a hora!!")
+            }, 5000)
+
+        })      
+    </script>
+</body>
+</html>
