@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adivinhe o número!</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: antiquewhite;
+            display: flex;
+            justify-content: center;
+            align-content: center;
+            margin: 0;
+        }
+
+        .game-container{
+            background-color: burlywood;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px black;
+            text-align: center;
+            width: 320px;
+            margin-top: 20px;
+        }
+
+        input[type="number"]{
+            padding: 10px;
+            font-size: 18px;
+            width: 300px;
+            margin-top: 20px;
+            box-shadow: 0 0 10px black;
+            border: none;
+            border: 2px solid brown;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        input[type="number"]:focus{
+            border-color:blueviolet;
+            outline: none;
+        }
+
+        button{
+            padding: 10px 20px;
+            font-size: 18px;
+            background-color: blueviolet;
+            color: white;
+            border: none;
+            cursor: pointer;
+            margin-top: 20px;
+            border-radius: 5px;
+        }
+
+        button:hover{
+            background-color: darkmagenta;
+        }
+
+    </style>
+</head>
+<body>
+   <div class="game-container">
+
+     <h1> Adivinhe o número! </h1>
+     <p> Digite um número entre 1 e 100 </p>
+     <input type="number" min="1" max="100" id="campo" placeholder="Digite um número">
+
+     <button> Arriscar! </button>
+
+   </div>
+
+   <script>
+    let numeroSecreto;
+    
+    console.log(Math.random())
+    function iniciarJogo(){
+        numeroSecreto = Math.floor(Math.random() * 100 ) 
+    }
+   </script>
+
+</body>
+</html>

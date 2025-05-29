@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1> Finalização </h1>
+
+   <!-- Menu -->
+
+    <div class="menu">
+        <button id="btnex1"> Tabuada </button>
+        <button id="btnex2"> Classificar Idade </button>
+        <button id="btnex3"> Somar até digitar 0 </button>
+    </div>
+
+    <!-- Exercício 1: Tabuada -->
+
+    <div class="menuTabuada" id="ex1">
+        <h3> Tabuada </h3>
+        <input type="number" id="tabuadaInput" placeholder="Insira um número">
+        <button id="btnTabuada"> Gerar! </button>
+        <ul id="tabuadaResultado"></ul>
+    </div>
+
+    <!-- Exercício 2: Classificar Idade -->
+
+     <div class="menuClassIdade" id="ex2">
+        <h3> Verificar Idade </h3>
+        <input type="number" id="idadeInput" placeholder="Digite sua Idade">
+        <button id="btnIdade"> Verificar! </button>
+     </div>
+
+
+     <!-- Exercício 3: Somar até digitar 0 -->
+
+      <div class="menuSoma" id="ex3">
+        <h3> Somador </h3>
+        <p> <strong> A soma irá continuar até digitar 0! </strong> </p>
+        <input type="number" id="somaInput" placeholder="Digite um Número!">
+        <button id="btnSoma"> Somar! </button>
+      </div>
+
+
+    <script>
+        
+     function mostrarExercício(id){
+        const ex1 = document.getElementById("ex1");  
+        const ex2 = document.getElementById("ex2");  
+        const ex3 = document.getElementById("ex3");  
+
+        ex1.style.display = "none";
+        ex2.style.display = "none";
+        ex3.style.display = "none";
+
+        document.getElementById(id).style.display = "block";
+     }
+
+     document.getElementById('btnex1').addEventListener('click', () => mostrarExercício("ex1"));
+     document.getElementById('btnex2').addEventListener('click', () => mostrarExercício("ex2"));
+     document.getElementById('btnex3').addEventListener('click', () => mostrarExercício("ex3"));
+
+
+       
+        // Tabuada //
+
+        document.getElementById('btnTabuada').addEventListener('click', () => {
+          const numero = parseInt(document.getElementById('tabuadaInput').value); 
+          const lista =  document.getElementById('tabuadaResultado');
+           for(let i = 1; i <= 10; i++) {
+            let resultado = numero * i;
+            document.body.textContent = `${numero} * ${i} = ${resultado}`;
+          }
+        })
+
+        
+    </script>
+</body>
+</html>

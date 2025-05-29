@@ -104,11 +104,13 @@
         }
 
         function reiniciarJogo(){
+            clearInterval(intervalId);
             tempo = 0;
             contador.textContent = tempo;
             campoTexto.value = ''
+            resultado.textContent = '';
             campoTexto.disabled = false
-            tempoIniciado = false
+            tempoIniciado = false;
         }
 
         campoTexto.addEventListener('input', () => {
@@ -118,11 +120,11 @@
             
             if(campoTexto.value === textoOriginal){
                 clearInterval(intervalId);
-                resultado.textContent = 'Parabéns! Você digitou o texto em ${tempo} segundos!'
-                campoTexto.disabled = true
+                resultado.textContent = "Parabéns! Você digitou o texto em ${} segundos!"
+                campoTexto.disabled = true;
             }
 
-        })
+        });
 
         reiniciarButton.addEventListener('click', reiniciarJogo);
     </script>
